@@ -1,0 +1,33 @@
+classDiagram
+    Funcionario <|-- Gerente
+    Equipe "*" o-- "*" Funcionario
+    Gerente -- Equipe
+
+
+    class Equipe {
+        +String nome
+        -Gerente __gerente
+        -List~Funcionario~ __componentes
+
+        +Equipe(String nome, Gerente gerente)
+        +add_componente(Funcionario novo)
+        +componentes() List~Funcionario~
+        +gerente() Gerente
+    }
+
+    class Funcionario {
+        +String nome
+        -List~Equipe~ __equipes_que_participa
+
+        +Funcionario(String nome)
+        +equipes_que_participa() List~Equipe~
+        +add_equipe(Equipe equipe)
+    }
+
+    class Gerente {
+        -List~Equipe~ __equipes_que_gerencia
+        
+        +lista_subordinados() List~Funcionario~
+        +equipes_que_gerencia() List~Equipe~
+        +gerenciar_equipe(Equipe equipe)
+    }
