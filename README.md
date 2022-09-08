@@ -9,7 +9,7 @@ Vamos trabalhar com um sistema de equipes parecido com o que vocês implementara
 Crie implementações destas classes em Python no arquivo `impl.py`. Disponibilizamos um conjunto de testes de unidade `test_impl.py` que verifica se sua implementação  está de acordo com o diagrama acima. Para executá-los rode o comando abaixo.
 
 ```
-pytest
+pytest -v
 ```
 
 ## Questões de discussão
